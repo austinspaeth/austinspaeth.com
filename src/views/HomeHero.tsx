@@ -32,9 +32,12 @@ const HomeHero:FunctionComponent<TSProps> = (props) => {
 
 // STYLED COMPONENTS //
 const HeroContainer = styled.div({
-    marginTop:400,
+    paddingTop:400,
     width:'100%',
     position:'relative',
+    '@media(max-width:600px)':{
+        paddingTop:300
+    }
 });
 const BatSignal = styled.img((props) => ({
     height:500,
@@ -44,6 +47,12 @@ const BatSignal = styled.img((props) => ({
     transformOrigin:'bottom right',
     transform:props.theme.batmanMode ? 'scale(1)':'scale(0)',
     transition:props.theme.batmanMode ? 'transform .25s cubic-bezier(.77,.67,.56,1)':'',
+    '@media(max-width:900px)':{
+        top:100,
+        bottom:'initial',
+        width:'100%',
+        height:'initial'
+    }
 }));
 const Name = styled.h1((props) => ({
     fontSize:46,
@@ -51,6 +60,9 @@ const Name = styled.h1((props) => ({
     fontWeight:900,
     margin:0,
     padding:0,
+    '@media(max-width:600px)':{
+        fontSize:40
+    }
 }));
 const CatchyPhrase = styled.h2((props) => ({
     fontSize:30,
@@ -61,6 +73,10 @@ const CatchyPhrase = styled.h2((props) => ({
     margin:0,
     padding:0,
     marginTop:5,
+    '@media(max-width:600px)':{
+        fontSize:22,
+        lineHeight:'38px'
+    }
 }));
 const MyCreed = styled.div((props) => ({
     width:'100%',
@@ -76,7 +92,16 @@ const MyCreed = styled.div((props) => ({
     fontSize:22,
     fontWeight:900,
     color: props.theme.batmanMode ? '#c6c6c6' : '#aa153d',
-    background: props.theme.batmanMode ? '#353639':'#EFE9ED'
+    background: props.theme.batmanMode ? '#353639':'#EFE9ED',
+    '@media(max-width:1250px)':{
+        padding:'40px 40px'
+    },
+    '@media(max-width:600px)':{
+        padding:'30px 30px',
+        fontSize:18,
+        lineHeight:'28px',
+        marginTop:30
+    }
 }));
 
 // REDUX MAPPING //

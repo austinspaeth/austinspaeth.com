@@ -16,16 +16,17 @@ const ResumeButton:FunctionComponent<TSProps> = (props) => {
 	const [ui, setUi] = useState();
 
 	return (
-		<Button>
+		<Button href="/assets/downloads/resume.pdf" download="Austin-Spaeth-Resume.pdf">
             Résumé
 		</Button>
 	)
 }
 
 // STYLED COMPONENTS //
-const Button = styled.div((props) => ({
+const Button = styled.a((props) => ({
     color:'#fff',
     fontWeight:600,
+    textDecoration:'none',
     fontSize:17,
     display:'flex',
     justifyContent:'center',

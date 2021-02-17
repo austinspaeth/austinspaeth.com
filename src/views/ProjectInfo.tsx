@@ -35,7 +35,14 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
             for: 'Me (Personal Startup)',
             role: 'Creator/Principle Developer',
             frontend: 'React, Redux, TypeScript, Relay, Styled Components',
-            backend: 'Serverless/AWS, AppSync/GraphQL, DynamoDB'
+            backend: 'Serverless/AWS, AppSync/GraphQL, DynamoDB',
+            video: 'https://www.youtube.com/embed/ERgrFVhL-n4?autoplay=1',
+            bullets:[
+                'Over 90,000 interactive videos served',
+                'WCAG 2.1 AAA accessible (just the software)',
+                'Saved Ecampus hundreds of thousands in license costs'
+            ],
+            description: 'While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!'
         },
         videodrivenlearning:{
             title:'Video Driven Learning (VDL)',
@@ -44,12 +51,14 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
             role: 'Creator/Principle Developer',
             frontend: 'React, Redux, TypeScript',
             backend: 'Serverless/AWS, Lambda/NodeJS, DynamoDB',
+            video: 'https://www.youtube.com/embed/nHalaFUqnTI?autoplay=1',
             bullets:[
                 'Over 90,000 interactive videos served',
                 'WCAG 2.1 AAA accessible (just the software)',
                 'Saved Ecampus hundreds of thousands in license costs'
             ],
-            description: 'While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!'
+            description: 'While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!',
+            demo:'https://vdl.oregonstate.education/demo'
         },
         neverendingstory:{
             title:'Never Ending Story (NES)',
@@ -57,7 +66,15 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
             for: 'Oregon State University Ecampus',
             role: 'Creator/Principle Developer',
             frontend: 'React, Redux',
-            backend: 'Static JSON'
+            backend: 'Static JSON',
+            video: 'https://www.youtube.com/embed/szby7ZHLnkA?autoplay=1',
+            bullets:[
+                'Over 90,000 interactive videos served',
+                'WCAG 2.1 AAA accessible (just the software)',
+                'Saved Ecampus hundreds of thousands in license costs'
+            ],
+            description: 'While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!',
+            demo:'https://physics.oregonstate.education/docs/#/0/0'
         },
         labshell:{
             title:'LabShell',
@@ -65,7 +82,14 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
             for: 'Oregon State University Ecampus',
             role: 'Team Lead/Core Developer',
             frontend: 'React, Redux, TypeScript',
-            backend: 'Serverless/AWS, Lambda/NodeJS, DynamoDB'
+            backend: 'Serverless/AWS, Lambda/NodeJS, DynamoDB',
+            video: 'https://www.youtube.com/embed/odM92ap8_c0?autoplay=1',
+            bullets:[
+                'Over 90,000 interactive videos served',
+                'WCAG 2.1 AAA accessible (just the software)',
+                'Saved Ecampus hundreds of thousands in license costs'
+            ],
+            description: 'While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!'
         }
     }
 
@@ -81,7 +105,7 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
 		<HeroContainer>
             <Preview style={{height: window.document.querySelector('#laptop')?.getBoundingClientRect().height}}>
                 <Laptop id={'laptop'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127.7 623.3"><g id="Page-1"><g id="Laptop"><path id="bezel" d="M967.1,1H160.4c-22,0-40.7,18-40.7,40.3V571.9h888.1V41.3C1007.8,19,989.1,1,967.1,1Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><circle id="webcam" cx="565.5" cy="31.5" r="6.5" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2}}/><g id="bottom"><path id="Shape" d="M1043.3,622.3H84.4C34.6,622.3,1,605.2,1,598V575.8c0-2.1,2.2-3.9,4.9-3.9H1121.8c2.7,0,4.9,1.8,4.9,3.9v23C1126.7,604.6,1100.7,622.3,1043.3,622.3Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><path id="Line" d="M1.8,595.5H1123.7" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeLinecap:'square'}}/></g><rect id="screen" x="155.5" y="64.4" width="815" height="474.95" style={{fill: props.theme.batmanMode ? 'rgb(24 24 25)':'rgb(184 186 191)',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2'}}/><path id="touchpad" d="M685.7,573.5v5c0,3.6-7,4.7-12.3,4.7H454.5c-5.6,0-12.7-1.1-12.7-4.7v-5" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',fillRule:'evenodd'}}/></g></g></Laptop>
-                <YouTube laptopWidth={laptopWidth} width={window.document.querySelector('#screen')?.getBoundingClientRect().width} height={window.document.querySelector('#screen')?.getBoundingClientRect().height} src="https://www.youtube.com/embed/odM92ap8_c0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></YouTube>
+                <YouTube laptopWidth={laptopWidth} width={window.document.querySelector('#screen')?.getBoundingClientRect().width} height={window.document.querySelector('#screen')?.getBoundingClientRect().height} src={apps[props.page?.replace(/\-+/g, '')]?.video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></YouTube>
             </Preview>
             <Introduction>
                 <Title>{apps[props.page?.replace(/\-+/g, '')]?.title}</Title>
@@ -140,6 +164,11 @@ const DemoBar = styled.div((props) => ({
     borderRadius:10,
     justifyContent:'space-between',
     alignItems:'center',
+    '@media(max-width:900px)':{
+        height:100,
+        marginBottom:-10,
+        marginTop:40
+    }
 }));
 const Github = styled.div({
     marginLeft:25,
@@ -151,6 +180,9 @@ const GithubIcon = styled.svg((props) => ({
     height:48,
     marginRight:10,
     fill:props.theme.batmanMode?'#d3d3db':'#7F7F89',
+    '@media(max-width:900px)':{
+        height:40
+    }
 }));
 const GithubStackedText = styled.div({
     display:'flex',
@@ -162,11 +194,17 @@ const Private = styled.div((props) => ({
     fontSize:22,
     color: props.theme.batmanMode ? '#d3d3db':'#7F7F89',
     fontWeight:700,
+    '@media(max-width:900px)':{
+        fontSize:16
+    }
 }));
 const FurtherInstruction = styled.div((props) => ({
     fontSize:20,
     color: props.theme.batmanMode? '#d3d3db':'#7F7F89',
     fontWeight:400,
+    '@media(max-width:900px)':{
+        fontSize:12
+    }
 }));
 const YouTube = styled.iframe((props) => ({
     height:window.document.querySelector('#screen')?.getBoundingClientRect().height,
@@ -197,38 +235,63 @@ const DemoButton = styled.div((props) => ({
     transition:'background .2s ease-in-out',
     ':hover':{
         background: props.theme.batmanMode ? '#ff3e72':'#d9426b',
+    },
+    '@media(max-width:900px)':{
+        height:40,
+        fontSize:16,
+        width:130
     }
 }));
 const TwoColumns = styled.div({
     marginTop:50,
     display:'flex',
     alignItems:'flex-start',
+    '@media(max-width:900px)':{
+        flexDirection:'column'
+    }
 });
 const Vitals = styled.div((props) => ({
     fontSize:17,
     lineHeight:'28px',
-    color:props.theme.batmanMode ? '#d3d3db':'#4e4e52'
+    color:props.theme.batmanMode ? '#d3d3db':'#4e4e52',
+    '@media(max-width:900px)':{
+        fontSize:16
+    }
 }));
 const Vital = styled.div({
 
 });
 const LeftColumn = styled.div((props) => ({
-    width:'calc(50%)',
+    width:'50%',
     boxSizing:'border-box',
     borderRight:props.theme.batmanMode ? '1px solid #3b3b3d' : '1px solid #e1e2e4',
     paddingRight:25,
+    '@media(max-width:900px)':{
+        width:'100%',
+        paddingRight:0,
+        borderRight:0
+    }
 }));
 const RightColumn = styled.div({
     width:'calc(50%)',
     boxSizing:'border-box',
     paddingLeft:25,
+    '@media(max-width:900px)':{
+        width:'100%',
+        paddingLeft:0
+    }
 });
 const Bullets = styled.ul((props) => ({
     lineHeight:'33px',
     color:props.theme.batmanMode ? '#d3d3db':'#4e4e52',
     fontSize:17,
     fontWeight:600,
-    paddingInlineStart:17
+    paddingInlineStart:17,
+    '@media(max-width:900px)':{
+        marginTop:30,
+        marginBottom:30,
+        fontSize:16
+    }
 }));
 const Bullet = styled.li({
 
@@ -261,6 +324,9 @@ const Title = styled.h1((props) => ({
     padding:0,
     fontWeight:800,
     color: props.theme.batmanMode ? '#d3d3db' :'#4E4E52',
+    '@media(max-width:900px)':{
+        fontSize:28
+    }
 }));
 const Subtitle = styled.h2((props) => ({
     fontSize:20,

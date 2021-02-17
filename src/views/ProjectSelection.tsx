@@ -67,6 +67,9 @@ const Projects = styled.div({
     justifyContent:'center',
     alignItems:'space-between',
     marginBottom:40,
+    '@media(max-width:1200px)':{
+        marginTop:30,
+    },
 });
 const SingleColumn = styled.div({
     width:'100%',
@@ -80,6 +83,14 @@ const DualColumns = styled.div({
     display:'flex',
     justifyContent:'space-between',
     alignItems:'flex-start',
+    '@media(max-width:1200px)':{
+        flexDirection:'column',
+        marginTop:30,
+    },
+    '@media(max-width:600px)':{
+        marginTop:30,
+        flexDirection:'column',
+    }
 });
 const Column = styled.div({
     width:'calc(50% - 20px)',
@@ -87,6 +98,9 @@ const Column = styled.div({
     flexDirection:'column',
     alignItems:'flex-start',
     justifyContent:'flex-start',
+    '@media(max-width:1200px)':{
+        width:'100%'
+    },
 });
 const VisibleFeeds = styled.section((props) => ({
     width:'100%',
@@ -123,6 +137,12 @@ const VisibleFeeds = styled.section((props) => ({
                 color:props.theme.batmanMode ? '#ff1957':'#aa153d',
             }
         }
+    },
+    '@media(max-width:1200px)':{
+        height:'initial',
+    },
+    '@media(max-width:600px)':{
+        height:'intitial',
     }
 }));
 const NES = styled.section((props) => ({
@@ -164,6 +184,14 @@ const NES = styled.section((props) => ({
                 color:props.theme.batmanMode ? '#ff1957':'#aa153d',
             }
         }
+    },
+    '@media(max-width:1200px)':{
+        marginTop:30,
+        height:'initial',
+    },
+    '@media(max-width:600px)':{
+        marginTop:30,
+        height:'intitial',
     }
 }));
 const VDL = styled.section((props) => ({
@@ -204,6 +232,12 @@ const VDL = styled.section((props) => ({
                 color:props.theme.batmanMode ? '#ff1957':'#aa153d',
             }
         }
+    },
+    '@media(max-width:1200px)':{
+        height:'initial',
+    },
+    '@media(max-width:600px)':{
+        height:'intitial',
     }
 }));
 const LabShell = styled.section((props) => ({
@@ -244,6 +278,14 @@ const LabShell = styled.section((props) => ({
                 color:props.theme.batmanMode ? '#ff1957':'#aa153d',
             }
         }
+    },
+    '@media(max-width:1200px)':{
+        marginTop:30,
+        height:'initial',
+    },
+    '@media(max-width:600px)':{
+        marginTop:30,
+        height:'initial',
     }
 }));
 const LeftSide = styled.div({
@@ -261,6 +303,12 @@ const Title = styled.h1((props) => ({
     marginTop:15,
     padding:0,
     transition:'color .2s ease-in-out',
+    '@media(max-width:1200px)':{
+        maxWidth:'100%',
+    },
+    '@media(max-width:600px)':{
+        fontSize:25,
+    }
 }));
 const Text = styled.div((props) => ({
     maxWidth:600,
@@ -270,6 +318,12 @@ const Text = styled.div((props) => ({
     lineHeight:'28px',
     marginTop:13,
     transition:'color .2s ease-in-out',
+    '@media(max-width:1200px)':{
+        maxWidth:'100%',
+    },
+    '@media(max-width:600px)':{
+        fontSize:15,
+    }
 }));
 const VFLogo = styled.svg((props) => ({
     height:32,
@@ -296,7 +350,10 @@ const VFScreenshot = styled.img((props) => ({
     right:0,
     bottom:0,
     borderTopLeftRadius:10,
-    boxShadow:props.theme.batmanMode ? '-15px -10px 15px rgba(0,0,0,.025)':'-10px -10px 0px rgba(170, 21, 61,.10)'
+    boxShadow:props.theme.batmanMode ? '-15px -10px 15px rgba(0,0,0,.025)':'-10px -10px 0px rgba(170, 21, 61,.10)',
+    '@media(max-width:1200px)':{
+        display:'none',
+    }
 }));
 const LSScreenshot = styled.img((props) => ({
     position:'absolute',
@@ -304,7 +361,10 @@ const LSScreenshot = styled.img((props) => ({
     bottom:15,
     borderTopLeftRadius:10,
     borderBottomLeftRadius:10,
-    boxShadow:props.theme.batmanMode ? '-15px -10px 15px rgba(0,0,0,.025)':'-10px -10px 0px rgba(170, 21, 61,.10)'
+    boxShadow:props.theme.batmanMode ? '-15px -10px 15px rgba(0,0,0,.025)':'-10px -10px 0px rgba(170, 21, 61,.10)',
+    '@media(max-width:1200px)':{
+        display:'none',
+    }
 }));
 
 // REDUX MAPPING //

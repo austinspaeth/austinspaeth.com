@@ -80,20 +80,28 @@ const HeaderContainer = styled.header((props) => ({
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
-    background:props.scrollPosition > 50 ? props.theme.batmanMode ? 'rgba(28,29,30,.975)':'rgba(246,248,250,.9)':'transparent',
-    backdropFilter: props.scrollPosition > 50 ? 'blur(30px)':'blur(0px)',
+    background:props.scrollPosition > 50 ? props.theme.batmanMode ? 'rgba(28,29,30,.9)':'rgba(246,248,250,.9)':'transparent',
+    backdropFilter: props.scrollPosition > 50 ? 'blur(16px)':'blur(0px)',
     transition:'all .2s ease-in-out'
 }));
 const PageTitle = styled.div((props) => ({
     fontSize:18,
     fontWeight:700,
     color:props.theme.batmanMode ? '#d5d6e0':'#4A4C57',
-    textTransform:'capitalize'
+    textTransform:'capitalize',
+    '@media(max-width:600px)':{
+        transformOrigin:'left center',
+        transform:'scale(.8)',
+    }
 }));
 const Subtitle = styled.div({
     fontSize:14,
     fontWeight:400,
-    color:'#787B84'
+    color:'#787B84',
+    '@media(max-width:600px)':{
+        transformOrigin:'left center',
+        transform:'scale(.8)',
+    }
 });
 const Centered = styled.div({
     position:'relative',
@@ -113,6 +121,10 @@ const RightItems = styled.div({
     display:'flex',
     justifyContent:'flex-end',
     alignItems:'center',
+    '@media(max-width:600px)':{
+        transformOrigin:'right center',
+        transform:'scale(.8)',
+    }
 });
 const CenterItems = styled.div((props) => ({
     position:'absolute',
@@ -128,6 +140,10 @@ const CenterItems = styled.div((props) => ({
     transform: props.view !== 'home' ? 'translateX(0px)':'translateX(20px)',
     opacity: props.view !== 'home' ? 1:0,
     transition:'all .2s ease-in-out',
+    '@media(max-width:600px)':{
+        left:40,
+        alignItems:'flex-start'
+    }
 }));
 const Name = styled.div((props) => ({
     fontSize:25,
@@ -135,7 +151,10 @@ const Name = styled.div((props) => ({
     fontWeight:700,
     opacity: (props.scrollPosition > 370 && props.view == 'home') ? 1 : 0,
     transform: (props.scrollPosition > 370 && props.view == 'home') ? 'translateY(0px)' : 'translateY(20px)',
-    transition:'all .2s ease-in-out'
+    transition:'all .2s ease-in-out',
+    '@media(max-width:600px)':{
+        display:'none'
+    }
 }));
 const Back = styled.div((props) => ({
     fontSize:20,
@@ -157,6 +176,12 @@ const Back = styled.div((props) => ({
                 fill: props.theme.batmanMode ? '#ff3e72':'#d9426b',
             }
         }
+    },
+    '@media(max-width:1200px)':{
+        fontSize:18
+    },
+    '@media(max-width:600px)':{
+        fontSize:0.01
     }
 }));
 const BackIcon = styled.svg((props) => ({
