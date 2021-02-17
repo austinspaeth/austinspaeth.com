@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import {  } from './redux/Actions';
 
 // VIEWS //
+import Header from './views/Header';
 
 // COMPONENTS //
 import { ThemeProvider } from 'styled-components';
@@ -14,8 +15,9 @@ import styled from 'styled-components';
 import './assets/css/styles.css';
 
 type TSProps = {
+    page: string,
+    theme: any, // Going for speed
     view: string,
-    theme: any // Going for speed
 };
 
 const App:FunctionComponent<TSProps> = (props) => {
@@ -31,15 +33,15 @@ const App:FunctionComponent<TSProps> = (props) => {
             return (
                 <ThemeProvider theme={props.theme}>
 					<AppContainer>
-
+                        <Header />
                     </AppContainer>
                 </ThemeProvider>
             );
-        case 'example':
+        case 'project':
             return (
                 <ThemeProvider theme={props.theme}>
                     <AppContainer>
-                        
+                        Project
                     </AppContainer>
                 </ThemeProvider>
             );
@@ -47,7 +49,7 @@ const App:FunctionComponent<TSProps> = (props) => {
             return (
                 <ThemeProvider theme={props.theme}>
 					<AppContainer>
-                        
+                        Project
                     </AppContainer>
                 </ThemeProvider>
             );

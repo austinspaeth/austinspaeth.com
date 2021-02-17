@@ -19,7 +19,8 @@ ReactDOM.render(
 		 <PersistGate loading={null} persistor={persistor}>
 			<BrowserRouter>
 				<Switch>
-
+                    <Route path="/:project" exact render={(data) => (<App view={'project'} page={data.match.params.project} />) } />
+                    <Route path="/" exact render={(data) => (<App view={'home'} page={null} />) } />
 				</Switch>
 			</BrowserRouter>
 		</PersistGate>
