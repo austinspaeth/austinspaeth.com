@@ -60,12 +60,13 @@ const HeaderContainer = styled.header((props) => ({
     borderBottom:props.scrollPosition > 50 ? '1px solid #e2e4eb':'1px solid transparent',
     width: '100%',
     position:'fixed',
+    zIndex:9,
     top:0,
     left:0,
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
-    background:props.scrollPosition > 50 ? 'rgba(246,248,250,.8)':'transparent',
+    background:props.scrollPosition > 50 ? 'rgba(246,248,250,.9)':'transparent',
     backdropFilter: props.scrollPosition > 50 ? 'blur(20px)':'blur(0px)',
     transition:'all .2s ease-in-out'
 }));
