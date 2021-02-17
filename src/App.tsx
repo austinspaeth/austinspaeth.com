@@ -46,8 +46,12 @@ const App:FunctionComponent<TSProps> = (props) => {
         case 'project':
             return (
                 <ThemeProvider theme={props.theme}>
-                    <AppContainer>
-                        Project
+                    <AppContainer id={'viewer'}>
+                        <Centered>
+                            <Header view={props.view}/>
+                            
+                            <ProjectSelection />
+                        </Centered>
                     </AppContainer>
                 </ThemeProvider>
             );
