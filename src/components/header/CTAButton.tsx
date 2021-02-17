@@ -26,7 +26,7 @@ const ResumeButton:FunctionComponent<TSProps> = (props) => {
 const Button = styled.div((props) => ({
     color:'#fff',
     fontWeight:600,
-    fontSize:16,
+    fontSize:17,
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
