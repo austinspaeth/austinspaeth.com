@@ -8,6 +8,7 @@ import { setTheme } from '../redux/Actions';
 import styled from 'styled-components';
 import CTAButton from '../components/header/CTAButton';
 import RoundButton from '../components/header/RoundButton';
+import { Link } from 'react-router-dom';
 
 type TSProps = {
     setTheme:Function,
@@ -44,6 +45,12 @@ const Header:FunctionComponent<TSProps> = (props) => {
             <Centered>
                 <LeftItems>
                     <Name view={props.view} scrollPosition={scrollPosition}>Austin Spaeth</Name>
+                    <Back view={props.view}>
+                        <Link style={{display:'flex', alignItems:'center',}} to={'/'}>
+                            <BackIcon id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.3 97.7"><path d="M0,48.8,46.9,0,57.2,9.7,26.8,41.4H99.3V55.9H26.6l30.5,32L46.9,97.7Z"/></BackIcon>
+                            Back
+                        </Link>
+                    </Back>
                 </LeftItems>
                 <CenterItems></CenterItems>
                 <RightItems>
@@ -110,6 +117,34 @@ const Name = styled.div((props) => ({
     opacity: (props.scrollPosition > 370 && props.view == 'home') ? 1 : 0,
     transform: (props.scrollPosition > 370 && props.view == 'home') ? 'translateY(0px)' : 'translateY(20px)',
     transition:'all .2s ease-in-out'
+}));
+const Back = styled.div((props) => ({
+    fontSize:20,
+    color: props.theme.batmanMode ? '#ff1957':'#aa153d',
+    cursor:'pointer',
+    TextDecoration:'none',
+    display:'flex',
+    justifyContent:'flex-start',
+    transform: props.view !== 'home' ? 'translateX(0px)':'translateX(20px)',
+    opacity: props.view !== 'home' ? 1:0,
+    pointerEvents: props.view === 'home' && 'none',
+    alignItems:'center',
+    position:'absolute',
+    transition:'all .2s ease-in-out',
+    ':hover':{
+        color: props.theme.batmanMode ? '#ff3e72':'#d9426b',
+        '> *':{
+            '> *':{
+                fill: props.theme.batmanMode ? '#ff3e72':'#d9426b',
+            }
+        }
+    }
+}));
+const BackIcon = styled.svg((props) => ({
+    height:20,
+    marginRight:10,
+    fill: props.theme.batmanMode ? '#ff1957':'#aa153d',
+    transition:'fill .2s ease-in-out',
 }));
 
 // REDUX MAPPING //

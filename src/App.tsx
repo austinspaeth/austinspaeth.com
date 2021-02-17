@@ -7,6 +7,7 @@ import {  } from './redux/Actions';
 // VIEWS //
 import Header from './views/Header';
 import HomeHero from './views/HomeHero';
+import ProjectHero from './views/ProjectHero';
 import ProjectSelection from './views/ProjectSelection';
 
 // COMPONENTS //
@@ -49,7 +50,7 @@ const App:FunctionComponent<TSProps> = (props) => {
                     <AppContainer id={'viewer'}>
                         <Centered>
                             <Header view={props.view}/>
-                            
+                            <ProjectHero />
                             <ProjectSelection />
                         </Centered>
                     </AppContainer>
