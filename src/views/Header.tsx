@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useState} from "react";
+import React, {FunctionComponent, useEffect, useState} from "react";
 
 // REDUX //
 import { connect } from "react-redux";
@@ -17,11 +17,21 @@ type TSProps = {
 const Header:FunctionComponent<TSProps> = (props) => {
 
 	// STATE //
-	const [ui, setUi] = useState();
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        window.document.querySelector('#viewer').scrollTo({top:0, behavior:'smooth'});
+        window.document.querySelector('#viewer').addEventListener('scroll', (e) => handleScroll(e), {passive:true});
+        return  window.document.querySelector('#viewer').removeEventListener('scroll', (e) => handleScroll(e));
+    }, []);
 
     const openExternalWebsite = (path:string) => {
         const newTab = window.open(path, '_blank');
         newTab.focus();
+    }
+
+    const handleScroll = (e) => {
+        setScrollPosition(e.target.scrollTop);
     }
 
     const toggleTheLights = () => {
@@ -29,7 +39,7 @@ const Header:FunctionComponent<TSProps> = (props) => {
     }
 
 	return (
-		<HeaderContainer>
+		<HeaderContainer scrollPosition={scrollPosition}>
             <Centered>
                 <LeftItems></LeftItems>
                 <CenterItems></CenterItems>
@@ -45,8 +55,9 @@ const Header:FunctionComponent<TSProps> = (props) => {
 }
 
 // STYLED COMPONENTS //
-const HeaderContainer = styled.header({
-    height: 160,
+const HeaderContainer = styled.header((props) => ({
+    height: props.scrollPosition > 50 ? 80 : 160,
+    borderBottom:props.scrollPosition > 50 ? '1px solid #e2e4eb':'1px solid transparent',
     width: '100%',
     position:'fixed',
     top:0,
@@ -54,7 +65,10 @@ const HeaderContainer = styled.header({
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
-});
+    background:props.scrollPosition > 50 ? 'rgba(246,248,250,.8)':'transparent',
+    backdropFilter: props.scrollPosition > 50 ? 'blur(20px)':'blur(0px)',
+    transition:'all .2s ease-in-out'
+}));
 const Centered = styled.div({
     position:'relative',
     width:'calc(100% - 30px)',

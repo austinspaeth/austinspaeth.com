@@ -7,6 +7,7 @@ import {  } from './redux/Actions';
 // VIEWS //
 import Header from './views/Header';
 import HomeHero from './views/HomeHero';
+import ProjectSelection from './views/ProjectSelection';
 
 // COMPONENTS //
 import { ThemeProvider } from 'styled-components';
@@ -33,10 +34,11 @@ const App:FunctionComponent<TSProps> = (props) => {
         case 'home':
             return (
                 <ThemeProvider theme={props.theme}>
-					<AppContainer>
+					<AppContainer id={'viewer'}>
                         <Centered>
                             <Header />
                             <HomeHero />
+                            <ProjectSelection />
                         </Centered>
                     </AppContainer>
                 </ThemeProvider>
@@ -66,6 +68,7 @@ const AppContainer = styled.div((props) => ({
     display:'flex',
     justifyContent:'center',
     alignItems:'flex-start',
+    overflowY:'auto',
 	background:props.theme.batmanMode ? '#242527':'#F2F3F5',
 }));
 const Centered = styled.div({
@@ -73,8 +76,9 @@ const Centered = styled.div({
     width:'calc(100% - 30px)',
     maxWidth:1200,
     display:'flex',
-    justifyContent:'center',
-    alignItems:'flex-start',
+    flexDirection:'column',
+    justifyContent:'flex-start',
+    alignItems:'center',
 });
 
 // REDUX MAPPINGS //
