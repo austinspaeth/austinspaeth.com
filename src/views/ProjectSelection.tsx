@@ -85,19 +85,32 @@ const Column = styled.div({
     alignItems:'flex-start',
     justifyContent:'flex-start',
 });
-const VisibleFeeds = styled.div({
+const VisibleFeeds = styled.div((props) => ({
     width:'100%',
     height:340,
     borderRadius:10,
-    background:'#A82828',
+    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
     boxSizing:'border-box',
     padding:25,
     position:'relative',
     display:'flex',
+    cursor:'pointer',
     overflow:'hidden',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
-});
-const NES = styled.div({
+    transition:'transform .5s  ease-out',
+    ':hover':{
+        transform:'translateY(-3px)',
+        boxShadow: '0px 17px 20px rgba(0,0,0,.065)',
+        '> *':{
+            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            '> *':{
+                fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+                color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            }
+        }
+    }
+}));
+const NES = styled.div((props) => ({
     height:320,
     width:'100%',
     marginTop:40,
@@ -110,10 +123,23 @@ const NES = styled.div({
     justifyContent:'flex-start',
     overflow:'hidden',
     borderRadius:10,
-    background:'#7905DC',
+    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
-});
-const VDL = styled.div({
+    cursor:'pointer',
+    transition:'transform .5s  ease-out',
+    ':hover':{
+        transform:'translateY(-3px)',
+        boxShadow: '0px 17px 20px rgba(0,0,0,.065)',
+        '> *':{
+            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            '> *':{
+                fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+                color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            }
+        }
+    }
+}));
+const VDL = styled.div((props) => ({
     height:460,
     width:'100%',
     boxSizing:'border-box',
@@ -125,10 +151,23 @@ const VDL = styled.div({
     justifyContent:'flex-start',
     overflow:'hidden',
     borderRadius:10,
-    background:'#000',
+    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
-});
-const LabShell = styled.div({
+    cursor:'pointer',
+    transition:'transform .5s ease-out',
+    ':hover':{
+        transform:'translateY(-3px)',
+        boxShadow: '0px 17px 20px rgba(0,0,0,.065)',
+        '> *':{
+            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            '> *':{
+                fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+                color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            }
+        }
+    }
+}));
+const LabShell = styled.div((props) => ({
     height:820,
     width:'100%',
     boxSizing:'border-box',
@@ -140,63 +179,82 @@ const LabShell = styled.div({
     justifyContent:'flex-start',
     overflow:'hidden',
     borderRadius:10,
-    background:'#511bff',
+    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
-});
+    cursor:'pointer',
+    transition:'transform .5s  ease-out',
+    ':hover':{
+        transform:'translateY(-3px)',
+        boxShadow: '0px 17px 20px rgba(0,0,0,.065)',
+        '> *':{
+            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            '> *':{
+                fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+                color:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            }
+        }
+    }
+}));
 const LeftSide = styled.div({
    
 });
 const RightSide = styled.div({
    
 });
-const Title = styled.div({
+const Title = styled.div((props) => ({
     fontSize:46,
     fontWeight:900,
-    color:'#fff',
+    color:props.theme.batmanMode ? '#d3d3db':'#4E4E52',
     maxWidth:550,
     margin:0,
     marginTop:15,
     padding:0,
-});
-const Text = styled.div({
+    transition:'color .2s ease-in-out',
+}));
+const Text = styled.div((props) => ({
     maxWidth:600,
-    color:'#fff',
+    color: props.theme.batmanMode ? '#fff!important':'#4E4E52!important',
     opacity:.7,
     fontWeight:300,
     lineHeight:'28px',
     marginTop:13,
-});
-const VFLogo = styled.svg({
+    transition:'color .2s ease-in-out',
+}));
+const VFLogo = styled.svg((props) => ({
     height:32,
-    fill:'#fff',
-});
-const VDLLogo = styled.svg({
+    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    transition:'fill .2s ease-in-out',
+}));
+const VDLLogo = styled.svg((props) => ({
     height:50,
-    fill:'#fff',
- });
-const NESLogo = styled.svg({
+    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    transition:'fill .2s ease-in-out',
+ }));
+const NESLogo = styled.svg((props) => ({
     height:40,
-    fill:'#fff',
-});
-const LSLogo = styled.svg({
+    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    transition:'fill .2s ease-in-out',
+}));
+const LSLogo = styled.svg((props) => ({
     height:40,
-    fill:'#fff',
-});
-const VFScreenshot = styled.img({
+    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    transition:'fill .2s ease-in-out',
+}));
+const VFScreenshot = styled.img((props) => ({
     position:'absolute',
     right:0,
     bottom:0,
     borderTopLeftRadius:10,
-    boxShadow:'-15px -10px 15px rgba(0,0,0,.025)'
-});
-const LSScreenshot = styled.img({
+    boxShadow:props.theme.batmanMode ? '-15px -10px 15px rgba(0,0,0,.025)':'-10px -10px 0px rgba(170, 21, 61,.10)'
+}));
+const LSScreenshot = styled.img((props) => ({
     position:'absolute',
     right:0,
     bottom:15,
     borderTopLeftRadius:10,
     borderBottomLeftRadius:10,
-    boxShadow:'-15px 10px 15px rgba(0,0,0,.025)'
-});
+    boxShadow:props.theme.batmanMode ? '-15px -10px 15px rgba(0,0,0,.025)':'-10px -10px 0px rgba(170, 21, 61,.10)'
+}));
 
 // REDUX MAPPING //
 const mapStateToProps = (state) => {
