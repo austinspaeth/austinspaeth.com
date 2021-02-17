@@ -32,7 +32,9 @@ const ProjectSelection:FunctionComponent<TSProps> = (props) => {
             <DualColumns>
                 <Column>
                     <VDL>
-
+                        <VDLLogo id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.7 51.8"><g id="Group_10" data-name="Group 10"><g id="_87686j.tif" data-name=" 87686j.tif"><g id="Group_1" data-name="Group 1"><path id="Path_1" data-name="Path 1" d="M33.2,26.1,3.9,7.1v38Z" /></g></g><path id="Path_2" data-name="Path 2" d="M3.2,45.1V5.7L23.1,17.9v-4L0,0V51.8L23.1,37.2V32.9Z" style={{opacity:.3}} /></g><g id="VDL" ><g ><path d="M45.1,16h4.6l4.5,12.1h.1L58.9,16h4.4L55.7,34.4H52.4Z"/><path d="M65.7,16h6.1a18.6,18.6,0,0,1,4.2.5,7.7,7.7,0,0,1,3.4,1.6A7.6,7.6,0,0,1,81.8,21a9,9,0,0,1,.9,4.2,8.4,8.4,0,0,1-.9,4A7.6,7.6,0,0,1,79.6,32a10.6,10.6,0,0,1-3.3,1.8,13.4,13.4,0,0,1-4,.6H65.7Zm4.1,14.7h2.1a10.9,10.9,0,0,0,2.6-.3,5.1,5.1,0,0,0,2.1-1A4.7,4.7,0,0,0,78,27.7a6.8,6.8,0,0,0,.5-2.7,5.6,5.6,0,0,0-.5-2.3A5.8,5.8,0,0,0,76.6,21a7.2,7.2,0,0,0-2-.9,6.9,6.9,0,0,0-2.5-.4H69.8Z" /><path d="M86.1,16h4.1V30.7h7.5v3.7H86.1Z" /></g></g></VDLLogo>
+                        <Title>Interactive Video Platform For Higher Ed</Title>
+                        <Text>While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!</Text>
                     </VDL>
                     <NES>
 
@@ -102,9 +104,16 @@ const NES = styled.div({
 const VDL = styled.div({
     height:460,
     width:'100%',
+    boxSizing:'border-box',
+    padding:25,
+    position:'relative',
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'flex-start',
+    justifyContent:'flex-start',
+    overflow:'hidden',
     borderRadius:10,
-    background:'#ffffff',
-    border:'1px solid #E2E4EB',
+    background:'#000',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
 });
 const LabShell = styled.div({
@@ -122,32 +131,36 @@ const RightSide = styled.div({
    
 });
 const Title = styled.div({
-   fontSize:46,
-   fontWeight:900,
-   color:'#fff',
-   maxWidth:550,
-   margin:0,
-   marginTop:15,
-   padding:0,
+    fontSize:46,
+    fontWeight:900,
+    color:'#fff',
+    maxWidth:550,
+    margin:0,
+    marginTop:15,
+    padding:0,
 });
 const Text = styled.div({
-   maxWidth:600,
-   color:'#fff',
-   opacity:.75,
-   fontWeight:300,
-   lineHeight:'28px',
-   marginTop:13,
+    maxWidth:600,
+    color:'#fff',
+    opacity:.7,
+    fontWeight:300,
+    lineHeight:'28px',
+    marginTop:13,
 });
 const VFLogo = styled.svg({
-   height:32,
-   fill:'#fff',
+    height:32,
+    fill:'#fff',
 });
+const VDLLogo = styled.svg({
+    height:50,
+    fill:'#fff',
+ });
 const VFScreenshot = styled.img({
-   position:'absolute',
-   right:0,
-   bottom:0,
-   borderTopLeftRadius:10,
-   boxShadow:'-15px -10px 15px rgba(0,0,0,.025)'
+    position:'absolute',
+    right:0,
+    bottom:0,
+    borderTopLeftRadius:10,
+    boxShadow:'-15px -10px 15px rgba(0,0,0,.025)'
 });
 
 // REDUX MAPPING //
