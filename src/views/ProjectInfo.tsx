@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useState} from "react";
+import React, {FunctionComponent, useState, useEffect} from "react";
 
 // REDUX //
 import { connect } from "react-redux";
@@ -12,6 +12,21 @@ type TSProps = {
 }
 
 const ProjectInfo:FunctionComponent<TSProps> = (props) => {
+
+    const [laptopWidth, setLaptopWidth] = useState(-999999);
+
+    useEffect(() => {
+        window.addEventListener('resize', (e) => handleResize(e));
+        return  window.addEventListener('resize', (e) => handleResize(e));
+    }, []);
+
+    useEffect(() => {
+        setLaptopWidth(window.document.querySelector('#laptop').getBoundingClientRect().width)
+    }, [document?.querySelector('#laptop')]);
+
+    const handleResize = (e) => {
+        setLaptopWidth(window.document.querySelector('#laptop').getBoundingClientRect().width);
+    }
 
     const apps = {
         visiblefeeds:{
@@ -60,12 +75,13 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
             newTab.focus();
         }
     }
+    
 
 	return (
 		<HeroContainer>
-            <Preview>
+            <Preview style={{height: window.document.querySelector('#laptop')?.getBoundingClientRect().height}}>
                 <Laptop id={'laptop'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127.7 623.3"><g id="Page-1"><g id="Laptop"><path id="bezel" d="M967.1,1H160.4c-22,0-40.7,18-40.7,40.3V571.9h888.1V41.3C1007.8,19,989.1,1,967.1,1Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><circle id="webcam" cx="565.5" cy="31.5" r="6.5" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2}}/><g id="bottom"><path id="Shape" d="M1043.3,622.3H84.4C34.6,622.3,1,605.2,1,598V575.8c0-2.1,2.2-3.9,4.9-3.9H1121.8c2.7,0,4.9,1.8,4.9,3.9v23C1126.7,604.6,1100.7,622.3,1043.3,622.3Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><path id="Line" d="M1.8,595.5H1123.7" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeLinecap:'square'}}/></g><rect id="screen" x="155.5" y="64.4" width="815" height="474.95" style={{fill: props.theme.batmanMode ? 'rgb(24 24 25)':'rgb(184 186 191)',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2'}}/><path id="touchpad" d="M685.7,573.5v5c0,3.6-7,4.7-12.3,4.7H454.5c-5.6,0-12.7-1.1-12.7-4.7v-5" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',fillRule:'evenodd'}}/></g></g></Laptop>
-                <YouTube width="785" height="458" src="https://www.youtube.com/embed/odM92ap8_c0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></YouTube>
+                <YouTube laptopWidth={laptopWidth} width={window.document.querySelector('#screen')?.getBoundingClientRect().width} height={window.document.querySelector('#screen')?.getBoundingClientRect().height} src="https://www.youtube.com/embed/odM92ap8_c0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></YouTube>
             </Preview>
             <Introduction>
                 <Title>{apps[props.page?.replace(/\-+/g, '')]?.title}</Title>
@@ -153,12 +169,12 @@ const FurtherInstruction = styled.div((props) => ({
     fontWeight:400,
 }));
 const YouTube = styled.iframe((props) => ({
-    height:458,
-    width:785,
+    height:window.document.querySelector('#screen')?.getBoundingClientRect().height,
+    width:window.document.querySelector('#screen')?.getBoundingClientRect().width,
     position:'absolute',
     zIndex:2,
-    top:71,
-    left:207,
+    top:Math.min(68, 68 - (0.058 * (1200 - window.document.querySelector('#laptop')?.getBoundingClientRect().width))),
+    left:Math.min(165, 165 - (0.138 * (1200 - window.document.querySelector('#laptop')?.getBoundingClientRect().width))),
     border:0,
 }));
 const DemoButton = styled.div((props) => ({
@@ -230,11 +246,10 @@ const Preview = styled.div({
     alignItems:'center',
     width:'100%',
     // @ts-ignore
-    height: document.querySelector('#laptop') ? document.querySelector('#laptop').offsetHeight : 620
 });
 const Laptop = styled.svg({
     position:'absolute',
-    height:600,
+    width:'100%',
 });
 const Introduction = styled.div({
   
