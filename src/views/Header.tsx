@@ -26,7 +26,6 @@ const Header:FunctionComponent<TSProps> = (props) => {
 
     const toggleTheLights = () => {
         props.setTheme({batmanMode:!props.theme.batmanMode});
-        console.log(props.theme)
     }
 
 	return (
