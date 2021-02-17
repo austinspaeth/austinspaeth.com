@@ -54,6 +54,13 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
         }
     }
 
+    const openDemo = (demoURL) => {
+        if(demoURL){
+            const newTab = window.open(demoURL, '_blank');
+            newTab.focus();
+        }
+    }
+
 	return (
 		<HeroContainer>
             <Preview>
@@ -73,7 +80,7 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
                     </Vitals>
                     <Bullets>
                         {apps[props.page?.replace(/\-+/g, '')]?.bullets?.map((bullet) => 
-                            <Bullet>
+                            <Bullet key={bullet}>
                                 {bullet}
                             </Bullet>
                         )}
@@ -93,7 +100,7 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
                         <FurtherInstruction>Code snippets available on request</FurtherInstruction>
                     </GithubStackedText>
                 </Github>
-                <DemoButton available={apps[props.page?.replace(/\-+/g, '')]?.demo}>
+                <DemoButton tabIndex={1} onKeyDown={(e) => e.key == 'Enter' && openDemo(apps[props.page?.replace(/\-+/g, '')]?.demo)} onClick={() => openDemo(apps[props.page?.replace(/\-+/g, '')]?.demo)} available={apps[props.page?.replace(/\-+/g, '')]?.demo}>
                     {apps[props.page?.replace(/\-+/g, '')]?.demo ? 'Try A Demo' : 'Not Available'}
                 </DemoButton>
             </DemoBar>
@@ -148,6 +155,7 @@ const DemoButton = styled.div((props) => ({
     color:'#fff',
     fontWeight:600,
     fontSize:20,
+    outline:0,
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
