@@ -7,16 +7,40 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 
 type TSProps = {
+    page:string,
 	theme:any
 }
 
-const ProjectHero:FunctionComponent<TSProps> = (props) => {
+const ProjectInfo:FunctionComponent<TSProps> = (props) => {
+
+    const apps = {
+        visiblefeeds:{
+            title:'Visible Feeds',
+            subtitle:'Private Social Network Startup'
+        },
+        videodrivenlearning:{
+            title:'Video Driven Learning (VDL)',
+            subtitle:'Interactive Video Platform'
+        },
+        neverendingstory:{
+            title:'Never Ending Story (NES)',
+            subtitle:'Interactive Long-Form Content Platform'
+        },
+        labshell:{
+            title:'LabShell',
+            subtitle:'Virtual Lab Platform'
+        }
+    }
 
 	return (
 		<HeroContainer>
             <Preview>
                 <Laptop id={'laptop'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127.7 623.3"><g id="Page-1"><g id="Laptop"><path id="bezel" d="M967.1,1H160.4c-22,0-40.7,18-40.7,40.3V571.9h888.1V41.3C1007.8,19,989.1,1,967.1,1Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><circle id="webcam" cx="565.5" cy="31.5" r="6.5" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2}}/><g id="bottom"><path id="Shape" d="M1043.3,622.3H84.4C34.6,622.3,1,605.2,1,598V575.8c0-2.1,2.2-3.9,4.9-3.9H1121.8c2.7,0,4.9,1.8,4.9,3.9v23C1126.7,604.6,1100.7,622.3,1043.3,622.3Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><path id="Line" d="M1.8,595.5H1123.7" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeLinecap:'square'}}/></g><rect id="screen" x="155.5" y="64.4" width="815" height="474.95" style={{fill: props.theme.batmanMode ? 'rgb(24 24 25)':'rgb(184 186 191)',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2'}}/><path id="touchpad" d="M685.7,573.5v5c0,3.6-7,4.7-12.3,4.7H454.5c-5.6,0-12.7-1.1-12.7-4.7v-5" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',fillRule:'evenodd'}}/></g></g></Laptop>
             </Preview>
+            <Introduction>
+                <Title>{apps[props.page?.replace(/\-+/g, '')]?.title}</Title>
+                <Subtitle>{apps[props.page?.replace(/\-+/g, '')]?.subtitle}</Subtitle>
+            </Introduction>
 		</HeroContainer>
 	)
 }
@@ -40,6 +64,26 @@ const Laptop = styled.svg({
     position:'absolute',
     height:600,
 });
+const Introduction = styled.div({
+  
+});
+const Title = styled.h1((props) => ({
+    fontSize:32,
+    margin:0,
+    marginTop:50,
+    padding:0,
+    fontWeight:800,
+    color: props.theme.batmanMode ? '#d3d3db' :'#4E4E52',
+}));
+const Subtitle = styled.h2((props) => ({
+    fontSize:20,
+    margin:0,
+    marginTop:5,
+    padding:0,
+    fontWeight:300,
+    color: props.theme.batmanMode ? '#fff' :'#000',
+    opacity:.5
+}));
 
 // REDUX MAPPING //
 const mapStateToProps = (state) => {
@@ -54,4 +98,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(ProjectHero);
+export default connect(mapStateToProps,mapDispatchToProps)(ProjectInfo);

@@ -12,6 +12,10 @@ import configureStore from "./redux/Store";
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/es/integration/react';
 
+// FIXING SAFARI'S STRUGGLES :( //
+import smoothscroll from 'smoothscroll-polyfill';
+smoothscroll.polyfill();
+
 const { persistor, store } = configureStore();
 
 ReactDOM.render(

@@ -7,7 +7,7 @@ import {  } from './redux/Actions';
 // VIEWS //
 import Header from './views/Header';
 import HomeHero from './views/HomeHero';
-import ProjectHero from './views/ProjectHero';
+import ProjectInfo from './views/ProjectInfo';
 import ProjectSelection from './views/ProjectSelection';
 
 // COMPONENTS //
@@ -28,8 +28,8 @@ const App:FunctionComponent<TSProps> = (props) => {
     // COMPONENT STATE //
 
     useEffect(() => {
-        
-    }, []);
+        document.querySelector('#viewer').scrollTo({top:0, behavior:'smooth'});
+    }, [props.page]);
 
     switch(props.view){
         case 'home':
@@ -50,7 +50,7 @@ const App:FunctionComponent<TSProps> = (props) => {
                     <AppContainer id={'viewer'}>
                         <Centered>
                             <Header page={props.page} view={props.view}/>
-                            <ProjectHero />
+                            <ProjectInfo page={props.page} />
                             <ProjectSelection />
                         </Centered>
                     </AppContainer>

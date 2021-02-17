@@ -88,7 +88,7 @@ const Column = styled.div({
     alignItems:'flex-start',
     justifyContent:'flex-start',
 });
-const VisibleFeeds = styled.div((props) => ({
+const VisibleFeeds = styled.section((props) => ({
     width:'100%',
     height:340,
     borderRadius:10,
@@ -125,7 +125,7 @@ const VisibleFeeds = styled.div((props) => ({
         }
     }
 }));
-const NES = styled.div((props) => ({
+const NES = styled.section((props) => ({
     height:320,
     width:'100%',
     marginTop:40,
@@ -166,7 +166,7 @@ const NES = styled.div((props) => ({
         }
     }
 }));
-const VDL = styled.div((props) => ({
+const VDL = styled.section((props) => ({
     height:460,
     width:'100%',
     boxSizing:'border-box',
@@ -206,7 +206,7 @@ const VDL = styled.div((props) => ({
         }
     }
 }));
-const LabShell = styled.div((props) => ({
+const LabShell = styled.section((props) => ({
     height:820,
     width:'100%',
     boxSizing:'border-box',
@@ -252,7 +252,7 @@ const LeftSide = styled.div({
 const RightSide = styled.div({
    
 });
-const Title = styled.div((props) => ({
+const Title = styled.h1((props) => ({
     fontSize:46,
     fontWeight:900,
     color:props.theme.batmanMode ? '#d3d3db':'#4E4E52',
