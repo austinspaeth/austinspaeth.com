@@ -37,7 +37,9 @@ const ProjectSelection:FunctionComponent<TSProps> = (props) => {
                         <Text>While working for Oregon State University Ecampus, there was a need to incorporate interactive video into courses. While management investigated purchasing licenses to costly 3rd party platforms, I volunteered that I could build something better for much less. With a green light, I built VDL (short for Video Driven Learning). VDL is used extensively in OSU courses til this day, and has delivered over 90,000 interactive videos to our students!</Text>
                     </VDL>
                     <NES>
-
+                        <NESLogo xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246 44.3"><g id="SqrCWd.tif"><path id="Path_46" data-name="Path 46" d="M8.7,42.5h-7C.7,42.3,0,42,0,41.3s.6-1,1.6-1.1a2.1,2.1,0,0,1,1.1,0H14.8c2,0,2.8.3,2.7,1.2s-.7,1.1-2.6,1.1Z" transform="translate(0 0)"/><path id="Path_47" data-name="Path 47" d="M7.4,33.1H1.9c-.7-.2-1.1-.6-1-1a1.6,1.6,0,0,1,.9-.9A2.5,2.5,0,0,1,3,31h9c1.5,0,2.3.3,2.2,1s-.7,1-2.2,1.1Z" transform="translate(0 0)"/><path id="Path_48" data-name="Path 48" d="M9,37.9H2.3a2.3,2.3,0,0,1-1.7-.7c-.2-.3.2-.8.5-1.2a2.2,2.2,0,0,1,1.4-.2c4.3-.1,8.7-.1,13,0,1.2,0,2,.5,2,1.1s-.7,1.1-1.9,1.1Z" transform="translate(0 0)"/><path id="Path_49" data-name="Path 49" d="M7.7,26.3h4.4c1.1,0,1.6.3,1.6.9s-.5.9-1.5.9H2.9c-1,0-1.5-.4-1.5-.9s.5-.9,1.5-.9Z" transform="translate(0 0)"/><path id="Path_50" data-name="Path 50" d="M9.6,24.2c-1.9,0-3.9.1-5.8,0s-1.9-.3-2-1S2.4,22,3.7,22H15.4c1.2,0,2.1.6,2,1.2s-.7,1-2.1,1-3.8,0-5.7,0Z" transform="translate(0 0)"/><path id="Path_51" data-name="Path 51" d="M9.9,17.5h5.5c1.3,0,2,.5,2,1.1s-.8,1.1-2.1,1.1c-3.7.1-7.3.1-11,0q-2.1,0-2.1-1.2c.1-.7.7-1,2.2-1Z" transform="translate(0 0)"/><path id="Path_52" data-name="Path 52" d="M44.6,23.4h3.6l7.9,10.7V23.4h3.6V39.9H56.1l-8-10.7V39.9H44.6Z" transform="translate(0 0)"/><path id="Path_53" data-name="Path 53" d="M70.6,36l2.2,2.3a7.8,7.8,0,0,1-5.1,1.9A6.4,6.4,0,0,1,61.1,34v-.4a6.3,6.3,0,0,1,6.1-6.4h.3c3.9,0,6.2,2.9,6.2,7.6h-9a3.1,3.1,0,0,0,3,2.3A4.6,4.6,0,0,0,70.6,36Zm-5.8-3.7h5.5a2.5,2.5,0,0,0-2.6-2,3,3,0,0,0-2.9,2Z" transform="translate(0 0)"/><path id="Path_54" data-name="Path 54" d="M73.7,27.5h3.6l3.4,8.4L84,27.5h3.6L82.3,39.9H79Z" transform="translate(0 0)"/><path id="Path_55" data-name="Path 55" d="M96.3,36l2.2,2.3a7.8,7.8,0,0,1-5.1,1.9A6.4,6.4,0,0,1,86.8,34v-.4a6.3,6.3,0,0,1,6.1-6.4h.3c3.9,0,6.2,2.9,6.2,7.6h-9a3.1,3.1,0,0,0,3,2.3A4.6,4.6,0,0,0,96.3,36Zm-5.8-3.7H96a2.5,2.5,0,0,0-2.6-2,3,3,0,0,0-2.9,2Z" transform="translate(0 0)"/><path id="Path_56" data-name="Path 56" d="M108.4,27.2v2.9c-2.6,0-4.3,1.5-4.3,3.9v5.9h-3.5V27.5h3.5v2.3a4.6,4.6,0,0,1,4.3-2.6Z" transform="translate(0 0)"/><path id="Path_57" data-name="Path 57" d="M114.6,26.6v3.3h8.3v3.2h-8.3v3.6h9.1v3.2H111V23.4h12.7v3.2Z" transform="translate(0 0)"/><path id="Path_58" data-name="Path 58" d="M137,32v7.9h-3.4V32.7a2.5,2.5,0,0,0-2.2-2.6h-.2a2.5,2.5,0,0,0-2.6,2.4h0v7.4h-3.5V27.5h3.5V29a4.1,4.1,0,0,1,3.7-1.8,4.6,4.6,0,0,1,4.7,4.4Z" transform="translate(0 0)"/><path id="Path_59" data-name="Path 59" d="M151.5,23.1V39.9H148V38.1a5,5,0,0,1-4.2,2.1c-3.3,0-5.7-2.7-5.7-6.5s2.4-6.5,5.7-6.5a5,5,0,0,1,4.2,2.1V23.1ZM148,33.7a3.3,3.3,0,0,0-2.9-3.6h-.3a3.7,3.7,0,0,0-3.3,3.8,3.5,3.5,0,0,0,3.3,3.3,3.2,3.2,0,0,0,3.2-3.3v-.2Z" transform="translate(0 0)"/><path id="Path_60" data-name="Path 60" d="M153.2,23.8a1.9,1.9,0,0,1,2-1.8,1.8,1.8,0,0,1,1.8,1.9,1.9,1.9,0,0,1-1.8,1.9,2,2,0,0,1-2-2Zm.2,3.7h3.5V39.9h-3.5Z" transform="translate(0 0)"/><path id="Path_61" data-name="Path 61" d="M170.6,32v7.9h-3.4V32.7a2.4,2.4,0,0,0-2.2-2.6h-.2a2.6,2.6,0,0,0-2.6,2.4h0v7.4h-3.5V27.5h3.5V29a4.4,4.4,0,0,1,3.8-1.8,4.5,4.5,0,0,1,4.6,4.4Z" transform="translate(0 0)"/><path id="Path_62" data-name="Path 62" d="M184.9,27.5V38.6c0,3.2-2.8,5.5-6.7,5.5a9.7,9.7,0,0,1-5.5-1.7l1.2-2.5a6.3,6.3,0,0,0,3.7,1.2c2.3,0,3.8-1,3.8-2.7V37.1a5.7,5.7,0,0,1-4.2,1.9,5.6,5.6,0,0,1-5.5-5.9c0-3.5,2.4-5.9,5.5-5.9a5.3,5.3,0,0,1,4.2,2V27.5Zm-3.6,5.6a2.9,2.9,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3.1,3,3,3,0,0,0,3,3h0a2.8,2.8,0,0,0,3-2.7c.1,0,.1-.1,0-.2Z" transform="translate(0 0)"/><path id="Path_63" data-name="Path 63" d="M187.5,37.5l2-2.5a8.2,8.2,0,0,0,5.5,2.2c1.8,0,2.7-.8,2.7-1.9s-1-1.5-3.5-2.1-6-1.8-6-5,2.5-5.1,6.1-5.1a9.1,9.1,0,0,1,6.5,2.3L199,27.9a8.3,8.3,0,0,0-4.8-1.8c-1.5,0-2.4.8-2.4,1.8s1,1.6,3.6,2.1,5.9,1.9,5.9,5-2.4,5.2-6.5,5.2A10.4,10.4,0,0,1,187.5,37.5Z" transform="translate(0 0)"/><path id="Path_64" data-name="Path 64" d="M209.9,39.1a4.3,4.3,0,0,1-2.8,1.1,3.7,3.7,0,0,1-3.8-3.5V30.3h-1.7V27.5h1.7V24h3.4v3.5h2.7v2.8h-2.7v5.5a1.2,1.2,0,0,0,1.1,1.4h.1a1.5,1.5,0,0,0,1.2-.4Z" transform="translate(0 0)"/><path id="Path_65" data-name="Path 65" d="M210.2,33.7a6.8,6.8,0,1,1,7.1,6.5H217A6.7,6.7,0,0,1,210.2,33.7Zm10.2,0a3.4,3.4,0,0,0-6.8.2,3.4,3.4,0,0,0,3.4,3.3A3.4,3.4,0,0,0,220.4,33.7Z" transform="translate(0 0)"/><path id="Path_66" data-name="Path 66" d="M232.8,27.2v2.9c-2.6,0-4.3,1.5-4.3,3.9v5.9H225V27.5h3.5v2.3A4.5,4.5,0,0,1,232.8,27.2Z" transform="translate(0 0)"/><path id="Path_67" data-name="Path 67" d="M233.3,43.5l.7-2.4a3.4,3.4,0,0,0,1.7.5,1.4,1.4,0,0,0,1.4-.6l.5-1-5.2-12.5H236l3.3,8.7,3.1-8.7H246l-5.1,13c-1,2.5-2.5,3.8-4.5,3.8a7.9,7.9,0,0,1-3.1-.8Z" transform="translate(0 0)"/><g id="MVIsaz.tif"><path id="Path_68" data-name="Path 68" d="M31.8,21.9v8.3A12.7,12.7,0,0,1,19.1,43.1a12.9,12.9,0,0,1-2-25.6h2.6c.5,0,.6.2.6.6v7.1c0,.7-.4.7-.9.7A4.4,4.4,0,0,0,14.7,29a4.3,4.3,0,0,0,2.9,5.5,4.4,4.4,0,0,0,5.6-2.9.4.4,0,0,1,.1-.3,9.1,9.1,0,0,0,.1-1.7c.1-5.6,0-11.2.1-16.8A12.1,12.1,0,0,1,31,1.2,12.8,12.8,0,0,1,47.9,7.3a11.8,11.8,0,0,1,1,3,12.8,12.8,0,0,1-9.6,15.1l-3.7.4c-.5,0-.6-.2-.6-.6V18c0-.5.3-.5.7-.6a9.6,9.6,0,0,0,2.8-.7,4,4,0,0,0,2.1-4.8,4.4,4.4,0,0,0-8.5-.4,5.7,5.7,0,0,0-.3,1.8Z" transform="translate(0 0)"/></g></g></NESLogo>
+                        <Title>A Reading Platform</Title>
+                        <Text>The first platform I built for Oregon State University Ecampus. While a modest app, it served an important purpose and saw extensive usage over the past 3 years. Allows our instructors to take PDFs or long form verbiage they’d normally send as PDFs to students, and instead make it interactive and engaging.</Text>
                     </NES>
                 </Column>
                 <Column>
@@ -96,8 +98,16 @@ const NES = styled.div({
     height:320,
     width:'100%',
     marginTop:40,
+    boxSizing:'border-box',
+    padding:25,
+    position:'relative',
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'flex-start',
+    justifyContent:'flex-start',
+    overflow:'hidden',
     borderRadius:10,
-    background:'#ffffff',
+    background:'#7905DC',
     border:'1px solid #E2E4EB',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
 });
@@ -119,8 +129,16 @@ const VDL = styled.div({
 const LabShell = styled.div({
     height:820,
     width:'100%',
+    boxSizing:'border-box',
+    padding:25,
+    position:'relative',
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'flex-start',
+    justifyContent:'flex-start',
+    overflow:'hidden',
     borderRadius:10,
-    background:'#ffffff',
+    background:'#511bff',
     border:'1px solid #E2E4EB',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
 });
@@ -155,6 +173,10 @@ const VDLLogo = styled.svg({
     height:50,
     fill:'#fff',
  });
+const NESLogo = styled.svg({
+    height:40,
+    fill:'#fff',
+});
 const VFScreenshot = styled.img({
     position:'absolute',
     right:0,
