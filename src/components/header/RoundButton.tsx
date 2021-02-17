@@ -7,8 +7,10 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 
 type TSProps = {
+    isBatSignal?: boolean,
     svg: any,
-	theme: string
+	theme: string,
+    triggered: Function,
 }
 
 const RoundButton:FunctionComponent<TSProps> = (props) => {
@@ -17,22 +19,34 @@ const RoundButton:FunctionComponent<TSProps> = (props) => {
 	const [ui, setUi] = useState();
 
 	return (
-		<RoundButtonContainer dangerouslySetInnerHTML={{ __html: props.svg }} />
+		<RoundButtonContainer isBatSignal={props.isBatSignal} onKeyDown={(e) => e.key == 'Enter' && props.triggered()} onClick={() => props.triggered()} dangerouslySetInnerHTML={{ __html: props.svg }} />
 	)
 }
 
 // STYLED COMPONENTS //
-const RoundButtonContainer = styled.div({
+const RoundButtonContainer = styled.div((props) => ({
     height:44,
     width:44,
+    marginRight:12,
     borderRadius:45,
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
+    background: props.isBatSignal ? (props.theme.batmanMode ? '#333436':'#E1E2E4' ) : props.theme.batmanMode ? '#46232E':'#EDE3E8',
+    cursor:'pointer',
+    transition:'background .2s ease-in-out',
     '> svg':{
-        height:21
+        fill: props.isBatSignal ? ( props.theme.batmanMode ? '#ffffff':'#000000' ) : props.theme.batmanMode ? '#ff1957':'#aa153d',
+        height:19,
+        transition:'fill .2s ease-in-out',
+    },
+    ':hover':{
+        background: props.isBatSignal ? ( props.theme.batmanMode ? '#000000':'#000000' ) : props.theme.batmanMode ? '#ff1957':'#aa153d',
+        '> svg':{
+            fill:'#fff'
+        },
     }
-});
+}));
 
 // REDUX MAPPING //
 const mapStateToProps = (state) => {

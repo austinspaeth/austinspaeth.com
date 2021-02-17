@@ -59,7 +59,7 @@ const App:FunctionComponent<TSProps> = (props) => {
 const AppContainer = styled.div((props) => ({
     height:'100%',
     width:'100%',
-	background:props.theme.main == 'dark' ? '#000':'fff',
+	background:props.theme.batmanMode ? '#242527':'#F2F3F5',
 }));
 
 // REDUX MAPPINGS //
