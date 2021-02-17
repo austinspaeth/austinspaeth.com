@@ -14,6 +14,7 @@ const HomeHero:FunctionComponent<TSProps> = (props) => {
 
 	return (
 		<HeroContainer>
+            <BatSignal src={'/assets/img/batsignal.svg'} alt={'The Bat Signal'} />
             <Name>Austin Spaeth</Name>
             <CatchyPhrase>
                 {props.theme.batmanMode ?
@@ -33,7 +34,17 @@ const HomeHero:FunctionComponent<TSProps> = (props) => {
 const HeroContainer = styled.div({
     marginTop:400,
     width:'100%',
+    position:'relative',
 });
+const BatSignal = styled.img((props) => ({
+    height:500,
+    position:'absolute',
+    right:0,
+    bottom:149,
+    transformOrigin:'bottom right',
+    transform:props.theme.batmanMode ? 'scale(1)':'scale(0)',
+    transition:props.theme.batmanMode ? 'transform .25s cubic-bezier(.77,.67,.56,1)':'',
+}));
 const Name = styled.h1((props) => ({
     fontSize:46,
     color: props.theme.batmanMode ? '#ff1957':'#aa153d',
