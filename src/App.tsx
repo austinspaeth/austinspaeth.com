@@ -36,7 +36,7 @@ const App:FunctionComponent<TSProps> = (props) => {
                 <ThemeProvider theme={props.theme}>
 					<AppContainer id={'viewer'}>
                         <Centered>
-                            <Header />
+                            <Header view={props.view}/>
                             <HomeHero />
                             <ProjectSelection />
                         </Centered>
