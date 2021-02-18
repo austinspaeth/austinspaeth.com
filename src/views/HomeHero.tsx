@@ -14,15 +14,10 @@ const HomeHero:FunctionComponent<TSProps> = (props) => {
 
 	return (
 		<HeroContainer>
-            <BatSignal src={'/assets/img/batsignal.svg'} alt={'The Bat Signal'} />
             <Me src={'/assets/img/austin-spaeth.jpeg'} alt={'Me with an Audi R8 :D'} />
             <Name>Austin Spaeth</Name>
             <CatchyPhrase>
-                {props.theme.batmanMode ?
-                    'This is definitely the first site you\'ve visited that has a Batman dark mode'
-                :
-                    'I build beautiful React apps that are inclusive, performant and effective'
-                }
+				I build beautiful React apps that are inclusive, performant and effective
             </CatchyPhrase>
             <MyCreed>
                 No matter the role or challenge, I have the skills and work ethic to make any project a success. I’m always learning, and I’m always ready.
@@ -41,7 +36,6 @@ const HeroContainer = styled.div({
     }
 });
 const Me = styled.img((props) => ({
-    display:props.theme.batmanMode && 'none',
     borderRadius:500,
     height:175,
     marginTop:-195,
@@ -51,24 +45,9 @@ const Me = styled.img((props) => ({
         marginTop:-120
     }
 }));
-const BatSignal = styled.img((props) => ({
-    height:500,
-    position:'absolute',
-    right:0,
-    bottom:149,
-    transformOrigin:'bottom right',
-    transform:props.theme.batmanMode ? 'scale(1)':'scale(0)',
-    transition:props.theme.batmanMode ? 'transform .25s cubic-bezier(.77,.67,.56,1)':'',
-    '@media(max-width:900px)':{
-        top:100,
-        bottom:'initial',
-        width:'100%',
-        height:'initial'
-    }
-}));
 const Name = styled.h1((props) => ({
     fontSize:46,
-    color: props.theme.batmanMode ? '#ff1957':'#aa153d',
+    color: props.theme.darkMode ? '#ff1957':'#aa153d',
     fontWeight:900,
     margin:0,
     padding:0,
@@ -78,7 +57,7 @@ const Name = styled.h1((props) => ({
 }));
 const CatchyPhrase = styled.h2((props) => ({
     fontSize:30,
-    color: props.theme.batmanMode ? '#878791':'#4E4E52',
+    color: props.theme.darkMode ? '#878791':'#4E4E52',
     fontWeight:600,
     maxWidth:550,
     lineHeight:'42px',
@@ -103,8 +82,8 @@ const MyCreed = styled.div((props) => ({
     textAlign:'center',
     fontSize:22,
     fontWeight:900,
-    color: props.theme.batmanMode ? '#c6c6c6' : '#aa153d',
-    background: props.theme.batmanMode ? '#353639':'#EFE9ED',
+    color: props.theme.darkMode ? '#c6c6c6' : '#aa153d',
+    background: props.theme.darkMode ? '#353639':'#EFE9ED',
     '@media(max-width:1250px)':{
         padding:'40px 40px'
     },

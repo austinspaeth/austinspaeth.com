@@ -1,6 +1,6 @@
 import { SET_THEME } from "./Constants";
 
-const theme = (state = { batmanMode:false }, action) => {
+const theme = (state = { darkMode:false }, action) => {
 	switch (action.type) {
 		case SET_THEME:
 			return action.theme;

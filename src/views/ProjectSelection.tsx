@@ -100,31 +100,31 @@ const VisibleFeeds = styled.section((props) => ({
     justifyContent:'flex-start',
     overflow:'hidden',
     borderRadius:10,
-    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
+    background:props.theme.darkMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
     cursor:'pointer',
     border:'1px solid transparent',
     transition:'border .2s ease-out',
     ':hover':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     outline:0,
     ':focus':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     '@media(max-width:1200px)':{
@@ -146,31 +146,31 @@ const NES = styled.section((props) => ({
     justifyContent:'flex-start',
     overflow:'hidden',
     borderRadius:10,
-    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
+    background:props.theme.darkMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
     cursor:'pointer',
     border:'1px solid transparent',
     transition:'border .2s ease-out',
     ':hover':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     outline:0,
     ':focus':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     '@media(max-width:1200px)':{
@@ -194,30 +194,30 @@ const VDL = styled.section((props) => ({
     justifyContent:'flex-start',
     overflow:'hidden',
     borderRadius:10,
-    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
+    background:props.theme.darkMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
     cursor:'pointer',
     border:'1px solid transparent',
     transition:'border .2s ease-out',
     ':hover':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     outline:0,
     ':focus':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     '@media(max-width:1200px)':{
@@ -240,30 +240,30 @@ const LabShell = styled.section((props) => ({
     overflow:'hidden',
     marginTop:40,
     borderRadius:10,
-    background:props.theme.batmanMode ? '#363639':'#FCFCFD',
+    background:props.theme.darkMode ? '#363639':'#FCFCFD',
     boxShadow: '0px 12px 16px rgba(0,0,0,.035)',
     cursor:'pointer',
     border:'1px solid transparent',
     transition:'border .2s ease-out',
     ':hover':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         },
     },
     outline:0,
     ':focus':{
-        border:props.theme.batmanMode ? '1px solid #ff1957':'1px solid #ecc6d0',
+        border:props.theme.darkMode ? '1px solid #ff1957':'1px solid #ecc6d0',
         'svg:last-of-type':{
             transform:'rotate(180deg) translateX(-5px)!important'
         },
         '> *':{
-            color:props.theme.batmanMode ? '#ff1957':'#aa153d',
-            fill:props.theme.batmanMode ? '#ff1957':'#aa153d',
+            color:props.theme.darkMode ? '#ff1957':'#aa153d',
+            fill:props.theme.darkMode ? '#ff1957':'#aa153d',
         }
     },
     '@media(max-width:1200px)':{
@@ -279,7 +279,7 @@ const Arrow = styled.svg((props) => ({
     position:'absolute',
     left: 575,
     height:20,
-    fill:props.theme.batmanMode ? '#d3d3db':'#4E4E52',
+    fill:props.theme.darkMode ? '#d3d3db':'#4E4E52',
     top:28,
     transform:'rotate(180deg) translateX(0px)',
     transition:'all .2s ease-in-out',
@@ -297,7 +297,7 @@ const RightSide = styled.div({
 const Title = styled.h1((props) => ({
     fontSize:46,
     fontWeight:900,
-    color:props.theme.batmanMode ? '#d3d3db':'#4E4E52',
+    color:props.theme.darkMode ? '#d3d3db':'#4E4E52',
     maxWidth:550,
     margin:0,
     marginTop:15,
@@ -309,7 +309,7 @@ const Title = styled.h1((props) => ({
 }));
 const Text = styled.div((props) => ({
     maxWidth:600,
-    color: props.theme.batmanMode ? '#fff!important':'#4E4E52!important',
+    color: props.theme.darkMode ? '#fff!important':'#4E4E52!important',
     opacity:.7,
     fontWeight:300,
     lineHeight:'28px',
@@ -321,29 +321,29 @@ const Text = styled.div((props) => ({
 }));
 const VFLogo = styled.svg((props) => ({
     height:32,
-    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    fill:props.theme.darkMode ? '#b7b7be':'#4e4e52',
     transition:'fill .2s ease-in-out',
 }));
 const VDLLogo = styled.svg((props) => ({
     height:42,
-    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    fill:props.theme.darkMode ? '#b7b7be':'#4e4e52',
     transition:'fill .2s ease-in-out',
  }));
 const NESLogo = styled.svg((props) => ({
     height:40,
-    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    fill:props.theme.darkMode ? '#b7b7be':'#4e4e52',
     transition:'fill .2s ease-in-out',
 }));
 const LSLogo = styled.svg((props) => ({
     height:36,
-    fill:props.theme.batmanMode ? '#b7b7be':'#4e4e52',
+    fill:props.theme.darkMode ? '#b7b7be':'#4e4e52',
     transition:'fill .2s ease-in-out',
 }));
 const Screenshot = styled.img((props) => ({
     position:'absolute',
     left:680,
     top:0,
-    borderLeft: props.theme.batmanMode ? '5px solid #464747':'5px solid #edeff3',
+    borderLeft: props.theme.darkMode ? '5px solid #464747':'5px solid #edeff3',
     width:520,
     '@media(max-width:600px)':{
         display:'none'

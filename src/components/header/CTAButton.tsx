@@ -35,12 +35,12 @@ const Button = styled.a((props) => ({
     height:44,
     width:115,
     boxSizing:'border-box',
-    background: props.theme.batmanMode ? '#ff1957':'#aa153d',
-    border: props.theme.batmanMode ? '2px solid #ff1957':'2px solid #aa153d',
+    background: props.theme.darkMode ? '#ff1957':'#aa153d',
+    border: props.theme.darkMode ? '2px solid #ff1957':'2px solid #aa153d',
     cursor:'pointer',
     transition:'background .2s ease-in-out',
     ':hover':{
-        background: props.theme.batmanMode ? '#ff3e72':'#d9426b',
+        background: props.theme.darkMode ? '#ff3e72':'#d9426b',
     }
 }));
 

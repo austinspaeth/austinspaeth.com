@@ -108,7 +108,7 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
 	return (
 		<HeroContainer>
             <Preview style={{height: window.document.querySelector('#laptop')?.getBoundingClientRect().height}}>
-                <Laptop id={'laptop'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127.7 623.3"><g id="Page-1"><g id="Laptop"><path id="bezel" d="M967.1,1H160.4c-22,0-40.7,18-40.7,40.3V571.9h888.1V41.3C1007.8,19,989.1,1,967.1,1Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><circle id="webcam" cx="565.5" cy="31.5" r="6.5" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2}}/><g id="bottom"><path id="Shape" d="M1043.3,622.3H84.4C34.6,622.3,1,605.2,1,598V575.8c0-2.1,2.2-3.9,4.9-3.9H1121.8c2.7,0,4.9,1.8,4.9,3.9v23C1126.7,604.6,1100.7,622.3,1043.3,622.3Z" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><path id="Line" d="M1.8,595.5H1123.7" style={{fill:'none',stroke:props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',strokeLinecap:'square'}}/></g><rect id="screen" x="155.5" y="64.4" width="815" height="474.95" style={{fill: props.theme.batmanMode ? 'rgb(24 24 25)':'rgb(184 186 191)',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2'}}/><path id="touchpad" d="M685.7,573.5v5c0,3.6-7,4.7-12.3,4.7H454.5c-5.6,0-12.7-1.1-12.7-4.7v-5" style={{fill: props.theme.batmanMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.batmanMode ? 'rgb(77 79 82)':'#c4cad2',fillRule:'evenodd'}}/></g></g></Laptop>
+                <Laptop id={'laptop'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127.7 623.3"><g id="Page-1"><g id="Laptop"><path id="bezel" d="M967.1,1H160.4c-22,0-40.7,18-40.7,40.3V571.9h888.1V41.3C1007.8,19,989.1,1,967.1,1Z" style={{fill: props.theme.darkMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.darkMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><circle id="webcam" cx="565.5" cy="31.5" r="6.5" style={{fill:'none',stroke:props.theme.darkMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2}}/><g id="bottom"><path id="Shape" d="M1043.3,622.3H84.4C34.6,622.3,1,605.2,1,598V575.8c0-2.1,2.2-3.9,4.9-3.9H1121.8c2.7,0,4.9,1.8,4.9,3.9v23C1126.7,604.6,1100.7,622.3,1043.3,622.3Z" style={{fill: props.theme.darkMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.darkMode ? 'rgb(77 79 82)':'#c4cad2',strokeWidth:2,fillRule:'evenodd'}}/><path id="Line" d="M1.8,595.5H1123.7" style={{fill:'none',stroke:props.theme.darkMode ? 'rgb(77 79 82)':'#c4cad2',strokeLinecap:'square'}}/></g><rect id="screen" x="155.5" y="64.4" width="815" height="474.95" style={{fill: props.theme.darkMode ? 'rgb(24 24 25)':'rgb(184 186 191)',stroke: props.theme.darkMode ? 'rgb(77 79 82)':'#c4cad2'}}/><path id="touchpad" d="M685.7,573.5v5c0,3.6-7,4.7-12.3,4.7H454.5c-5.6,0-12.7-1.1-12.7-4.7v-5" style={{fill: props.theme.darkMode ? 'rgb(57 58 60)':'#e1e2e4',stroke: props.theme.darkMode ? 'rgb(77 79 82)':'#c4cad2',fillRule:'evenodd'}}/></g></g></Laptop>
                 <YouTube laptopWidth={laptopWidth} width={window.document.querySelector('#screen')?.getBoundingClientRect().width} height={window.document.querySelector('#screen')?.getBoundingClientRect().height} src={apps[props.page?.replace(/\-+/g, '')]?.video + '&playsinline=1'} frameborder="0" allow="accelerometer; playsinline; allowsInlineMediaPlayback; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></YouTube>
             </Preview>
             <Introduction>
@@ -186,7 +186,7 @@ const Screenshot = styled.img((props) => ({
     marginBottom:15,
     borderRadius:10,
     boxSizing:'border-box',
-    border: props.theme.batmanMode ? '15px solid #353639':'15px solid #dcdee2',
+    border: props.theme.darkMode ? '15px solid #353639':'15px solid #dcdee2',
     '@media(max-width:750px)':{
         width:'100%',
         marginBottom:30,
@@ -196,7 +196,7 @@ const DemoBar = styled.div((props) => ({
     width:'100%',
     height:120,
     marginTop:50,
-    background: props.theme.batmanMode ? '#353639':'#DCDEE2',
+    background: props.theme.darkMode ? '#353639':'#DCDEE2',
     display:'flex',
     borderRadius:10,
     justifyContent:'space-between',
@@ -216,7 +216,7 @@ const Github = styled.div({
 const GithubIcon = styled.svg((props) => ({
     height:48,
     marginRight:10,
-    fill:props.theme.batmanMode?'#d3d3db':'#7F7F89',
+    fill:props.theme.darkMode?'#d3d3db':'#7F7F89',
     '@media(max-width:900px)':{
         height:40
     }
@@ -229,7 +229,7 @@ const GithubStackedText = styled.div({
 });
 const Private = styled.div((props) => ({
     fontSize:22,
-    color: props.theme.batmanMode ? '#d3d3db':'#7F7F89',
+    color: props.theme.darkMode ? '#d3d3db':'#7F7F89',
     fontWeight:700,
     '@media(max-width:900px)':{
         fontSize:16
@@ -237,7 +237,7 @@ const Private = styled.div((props) => ({
 }));
 const FurtherInstruction = styled.div((props) => ({
     fontSize:20,
-    color: props.theme.batmanMode? '#d3d3db':'#7F7F89',
+    color: props.theme.darkMode? '#d3d3db':'#7F7F89',
     fontWeight:400,
     '@media(max-width:900px)':{
         fontSize:12
@@ -266,12 +266,12 @@ const DemoButton = styled.div((props) => ({
     pointerEvents: props.available ? 'all':'none',
     marginRight:25,
     boxSizing:'border-box',
-    background: props.available ? props.theme.batmanMode ? '#ff1957':'#aa153d' : props.theme.batmanMode ? '#48484c':'#aeaeb2',
-    border: props.available ?  props.theme.batmanMode ? '2px solid #ff1957':'2px solid #aa153d': props.theme.batmanMode ? '#48484c' :'#aeaeb2',
+    background: props.available ? props.theme.darkMode ? '#ff1957':'#aa153d' : props.theme.darkMode ? '#48484c':'#aeaeb2',
+    border: props.available ?  props.theme.darkMode ? '2px solid #ff1957':'2px solid #aa153d': props.theme.darkMode ? '#48484c' :'#aeaeb2',
     cursor:'pointer',
     transition:'background .2s ease-in-out',
     ':hover':{
-        background: props.theme.batmanMode ? '#ff3e72':'#d9426b',
+        background: props.theme.darkMode ? '#ff3e72':'#d9426b',
     },
     '@media(max-width:900px)':{
         height:45,
@@ -290,7 +290,7 @@ const TwoColumns = styled.div({
 const Vitals = styled.div((props) => ({
     fontSize:17,
     lineHeight:'28px',
-    color:props.theme.batmanMode ? '#d3d3db':'#4e4e52',
+    color:props.theme.darkMode ? '#d3d3db':'#4e4e52',
     '@media(max-width:900px)':{
         fontSize:16
     }
@@ -301,7 +301,7 @@ const Vital = styled.div({
 const LeftColumn = styled.div((props) => ({
     width:'50%',
     boxSizing:'border-box',
-    borderRight:props.theme.batmanMode ? '1px solid #3b3b3d' : '1px solid #e1e2e4',
+    borderRight:props.theme.darkMode ? '1px solid #3b3b3d' : '1px solid #e1e2e4',
     paddingRight:25,
     '@media(max-width:900px)':{
         width:'100%',
@@ -320,7 +320,7 @@ const RightColumn = styled.div({
 });
 const Bullets = styled.ul((props) => ({
     lineHeight:'33px',
-    color:props.theme.batmanMode ? '#d3d3db':'#4e4e52',
+    color:props.theme.darkMode ? '#d3d3db':'#4e4e52',
     fontSize:17,
     fontWeight:600,
     paddingInlineStart:17,
@@ -334,7 +334,7 @@ const Bullet = styled.li({
 
 });
 const Description = styled.div((props) => ({
-    color:props.theme.batmanMode ? '#fff':'#000',
+    color:props.theme.darkMode ? '#fff':'#000',
     opacity:.5,
     lineHeight:'31px',
     fontSize:16,
@@ -360,7 +360,7 @@ const Title = styled.h1((props) => ({
     marginTop:50,
     padding:0,
     fontWeight:800,
-    color: props.theme.batmanMode ? '#d3d3db' :'#4E4E52',
+    color: props.theme.darkMode ? '#d3d3db' :'#4E4E52',
     '@media(max-width:900px)':{
         fontSize:28
     }
@@ -371,7 +371,7 @@ const Subtitle = styled.h2((props) => ({
     marginTop:5,
     padding:0,
     fontWeight:300,
-    color: props.theme.batmanMode ? '#fff' :'#000',
+    color: props.theme.darkMode ? '#fff' :'#000',
     opacity:.5
 }));
 

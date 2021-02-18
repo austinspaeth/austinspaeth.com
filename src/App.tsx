@@ -74,7 +74,7 @@ const AppContainer = styled.div((props) => ({
     justifyContent:'center',
     alignItems:'flex-start',
     overflowY:'auto',
-	background:props.theme.batmanMode ? '#242527':'#F2F3F5',
+	background:props.theme.darkMode ? '#242527':'#F2F3F5',
 }));
 const Centered = styled.div({
     position:'relative',
