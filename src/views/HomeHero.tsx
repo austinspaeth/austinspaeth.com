@@ -15,10 +15,11 @@ const HomeHero:FunctionComponent<TSProps> = (props) => {
 	return (
 		<HeroContainer>
             <BatSignal src={'/assets/img/batsignal.svg'} alt={'The Bat Signal'} />
+            <Me src={'/assets/img/austin-spaeth.jpeg'} alt={'Me with an Audi R8 :D'} />
             <Name>Austin Spaeth</Name>
             <CatchyPhrase>
                 {props.theme.batmanMode ?
-                    'I always create dark modes, because that is always users’ #1 feature request'
+                    'This is definitely the first site you\'ve visited that has a Batman dark mode'
                 :
                     'I build beautiful React apps that are inclusive, performant and effective'
                 }
@@ -39,6 +40,17 @@ const HeroContainer = styled.div({
         paddingTop:300
     }
 });
+const Me = styled.img((props) => ({
+    display:props.theme.batmanMode && 'none',
+    borderRadius:500,
+    height:175,
+    marginTop:-195,
+    position:'absolute',
+    '@media(max-width:600px)':{
+        height:100,
+        marginTop:-120
+    }
+}));
 const BatSignal = styled.img((props) => ({
     height:500,
     position:'absolute',

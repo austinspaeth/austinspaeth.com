@@ -45,7 +45,10 @@ const Header:FunctionComponent<TSProps> = (props) => {
 		<HeaderContainer scrollPosition={scrollPosition}>
             <Centered>
                 <LeftItems>
-                    <Name view={props.view} scrollPosition={scrollPosition}>Austin Spaeth</Name>
+                    <Name view={props.view} scrollPosition={scrollPosition}>
+                        <Me src={'/assets/img/austin-spaeth.jpeg'} alt={'Me with an Audi R8 :D'} />
+                        Austin Spaeth
+                    </Name>
                     <Back view={props.view}>
                         <Link style={{display:'flex', alignItems:'center',}} to={'/'}>
                             <BackIcon id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.3 97.7"><path d="M0,48.8,46.9,0,57.2,9.7,26.8,41.4H99.3V55.9H26.6l30.5,32L46.9,97.7Z"/></BackIcon>
@@ -82,7 +85,10 @@ const HeaderContainer = styled.header((props) => ({
     alignItems:'center',
     background:props.scrollPosition > 50 ? props.theme.batmanMode ? 'rgba(28,29,30,.9)':'rgba(246,248,250,.9)':'transparent',
     backdropFilter: props.scrollPosition > 50 ? 'blur(16px)':'blur(0px)',
-    transition:'all .2s ease-in-out'
+    transition:'all .2s ease-in-out',
+    '@media(max-width:600px)':{
+        height:80
+    }
 }));
 const PageTitle = styled.div((props) => ({
     fontSize:18,
@@ -90,8 +96,7 @@ const PageTitle = styled.div((props) => ({
     color:props.theme.batmanMode ? '#d5d6e0':'#4A4C57',
     textTransform:'capitalize',
     '@media(max-width:600px)':{
-        transformOrigin:'left center',
-        transform:'scale(.8)',
+        display:'none'
     }
 }));
 const Subtitle = styled.div({
@@ -99,8 +104,7 @@ const Subtitle = styled.div({
     fontWeight:400,
     color:'#787B84',
     '@media(max-width:600px)':{
-        transformOrigin:'left center',
-        transform:'scale(.8)',
+        display:'none'
     }
 });
 const Centered = styled.div({
@@ -140,8 +144,8 @@ const CenterItems = styled.div((props) => ({
     transform: props.view !== 'home' ? 'translateX(0px)':'translateX(20px)',
     opacity: props.view !== 'home' ? 1:0,
     transition:'all .2s ease-in-out',
-    '@media(max-width:600px)':{
-        left:40,
+    '@media(max-width:900px)':{
+        left:30,
         alignItems:'flex-start'
     }
 }));
@@ -156,6 +160,12 @@ const Name = styled.div((props) => ({
         display:'none'
     }
 }));
+const Me = styled.img({
+    borderRadius:500,
+    height:28,
+    marginBottom:-5,
+    marginRight:10
+});
 const Back = styled.div((props) => ({
     fontSize:20,
     color: props.theme.batmanMode ? '#ff1957':'#aa153d',
@@ -177,10 +187,7 @@ const Back = styled.div((props) => ({
             }
         }
     },
-    '@media(max-width:1200px)':{
-        fontSize:18
-    },
-    '@media(max-width:600px)':{
+    '@media(max-width:900px)':{
         fontSize:0.01
     }
 }));
