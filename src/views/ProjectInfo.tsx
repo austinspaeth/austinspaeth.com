@@ -93,6 +93,7 @@ const ProjectInfo:FunctionComponent<TSProps> = (props) => {
                 'Over 1,000 students use LabShell every term',
                 'Exploring licensing to other universities and offering for free to high schools'
             ],
+            demo:'https://labs.oregonstate.education/demo',
             description: 'At the start of 2020, Ecampus faced a crisis because a solution they had been using to offer labs virtually was being abandoned at the end of the year. My team was asked if we could come up with a viable solution, and we took the opportunity without hesitating. It was no small task; an entire platform would need to be planned and built out, along with 28 unique chemistry labs and a backend interface for instructors. What we were able to accomplish is nothing short of amazing. Our team of 3 worked tirelessly through the pandemic to deliver a masterpiece that will revolutionize how students around the world learn chemistry in the years to come.'
         }
     }
