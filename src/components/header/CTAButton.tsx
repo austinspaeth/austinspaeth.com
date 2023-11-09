@@ -16,7 +16,7 @@ const ResumeButton:FunctionComponent<TSProps> = (props) => {
 	const [ui, setUi] = useState();
 
 	return (
-		<Button href="/assets/downloads/resume.pdf" download="Austin-Spaeth-Resume.pdf">
+		<Button href="/assets/pdf/austin-spaeth-resume-2023.pdf" download="Austin-Spaeth-Resume.pdf">
             Résumé
 		</Button>
 	)

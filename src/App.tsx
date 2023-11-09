@@ -74,7 +74,7 @@ const AppContainer = styled.div((props) => ({
     justifyContent:'center',
     alignItems:'flex-start',
     overflowY:'auto',
-	background:props.theme.darkMode ? '#242527':'#F2F3F5',
+	background:props.theme.darkMode ? '#242527':'#fff',
 }));
 const Centered = styled.div({
     position:'relative',
@@ -84,6 +84,16 @@ const Centered = styled.div({
     flexDirection:'column',
     justifyContent:'flex-start',
     alignItems:'center',
+});
+const BackdropImage = styled.img({
+    width: 'calc(100% + 1000px)',
+    position: 'absolute',
+    top: 370,
+    zIndex: 0,
+    boxShadow: '0px 9500px 9000px 9000px #eee',
+    filter: 'brightness(.95)',
+    pointerEvents: 'none',
+    boxSizing: 'content-box',
 });
 
 // REDUX MAPPINGS //

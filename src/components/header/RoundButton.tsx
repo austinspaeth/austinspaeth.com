@@ -10,7 +10,7 @@ type TSProps = {
     isThemeToggle?: boolean,
     svg: any,
 	theme: string,
-    triggered: Function,
+    triggered: string,
 }
 
 const RoundButton:FunctionComponent<TSProps> = (props) => {
@@ -19,12 +19,12 @@ const RoundButton:FunctionComponent<TSProps> = (props) => {
 	const [ui, setUi] = useState();
 
 	return (
-		<RoundButtonContainer isThemeToggle={props.isThemeToggle} onKeyDown={(e) => e.key == 'Enter' && props.triggered()} onClick={() => props.triggered()} dangerouslySetInnerHTML={{ __html: props.svg }} />
+		<RoundButtonContainer isThemeToggle={props.isThemeToggle} href={props.triggered} dangerouslySetInnerHTML={{ __html: props.svg }} />
 	)
 }
 
 // STYLED COMPONENTS //
-const RoundButtonContainer = styled.div((props) => ({
+const RoundButtonContainer = styled.a((props) => ({
     height:44,
     width:44,
     marginRight:12,
